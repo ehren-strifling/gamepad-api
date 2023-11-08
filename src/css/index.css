@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+body {
+  background-color: #e0e0e9;
+}
+
+h1 {
+  margin-top: 40px;
+  color: #000000;
+}
+
+.controller-bar {
+  list-style: none;
+  font-size: 0px;
+}
+.controller-bar > li {
+  font-size: 16px;
+  display: inline-block;
+  border: 1px solid #000000;
+  padding: 2px;
+
+  background-color: #FFFFFF;
+  color:#000000;
+}
+.controller-bar > li:hover {
+  cursor: pointer;
+
+  background-color: #B0B0B0;
+}
+.controller-bar > li[data-selected="true"] {
+  background-color:  #000000;
+  color: #FFFFFF;
+}
