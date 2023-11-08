@@ -17,18 +17,18 @@ class GamepadReader {
     /**@type {ControllerReader[]} */
     this.controllerBar = [];
 
-    this.element.addEventListener('gamepadconnected', e=>this.onControllerConnected(e));
-    this.element.addEventListener('gamepaddisconnected', e=>this.onControllerDisconnected(e));
+    window.addEventListener('gamepadconnected', e=>this.onControllerConnected(e));
+    window.addEventListener('gamepaddisconnected', e=>this.onControllerDisconnected(e));
 
-    this.onControllerConnected({gamepad: {index: 0}});
-    this.onControllerConnected({gamepad: {index: 1}});
-    this.onControllerConnected({gamepad: {index: 2}});
+    // this.onControllerConnected({gamepad: {index: 0}});
+    // this.onControllerConnected({gamepad: {index: 1}});
+    // this.onControllerConnected({gamepad: {index: 2}});
 
     //this.onControllerDisconnected({index: 1});
   }
 
   tick() {
-    
+
   }
 
   addController(gamepad) {
@@ -79,7 +79,7 @@ class GamepadReader {
   }
   onControllerDisconnected(e) {
     this.controllerBar.forEach((c, i)=>{
-      if (c.index === e.index) {
+      if (c.index === e.gamepad.index) {
         this.removeController(i);
       }
     });
