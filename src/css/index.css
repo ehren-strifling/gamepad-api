@@ -31,3 +31,91 @@ h1 {
   background-color:  #000000;
   color: #FFFFFF;
 }
+
+.controller-container {
+  margin-top:10px;
+  display:flex;
+}
+/* Made in a way so that it's easy to make responsive later after working on this more. */
+.col-2 {
+  width: calc(50% - 4px);
+  margin-right:8px;
+}
+
+.controller-info {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  padding: 20px 20px 20px 20px;
+}
+.controller-info > h2 {
+  
+}
+.controller-info > p {
+  
+}
+.controller-axis {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  padding: 20px 20px 20px 20px;
+  margin-top: 20px;
+}
+.controller-axis > .dual-axis {
+  margin-right: 20px;
+  display:inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: #808080;
+  border-radius: 50%;
+
+  position:relative;
+}
+.controller-axis > .dual-axis .circle {
+  position:absolute;
+  left: 25px;
+  top:25px;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+.controller-axis > .dual-axis .circle > .stick {
+
+}
+.controller-buttons {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  padding: 20px 20px 20px 20px;
+}
+.controller-buttons > .button {
+  margin-bottom:10px;
+}
+.controller-buttons > .button > p {
+  display:block;
+}
+.controller-buttons > .button > .pressed {
+  display: inline-block;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  background-color: #FF0000;
+  border: 2px solid #000000;
+  width:20px;
+  height:20px;
+}
+.controller-buttons > .button > .pressed.active {
+  background-color: #00FF00;
+}
+.controller-buttons > .button > .analog {
+  margin-left: 10px;
+  display: inline-block;
+  width: 100px;
+  height:20px;
+  background-color: #808080;
+  overflow:hidden;
+
+  border-radius: 10px;
+}
+.controller-buttons > .button > .analog > .analog-fill {
+  height:20px;
+  width:0%;
+  background-color: #00FF00;
+}
